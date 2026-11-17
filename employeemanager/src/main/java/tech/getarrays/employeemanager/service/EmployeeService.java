@@ -1,11 +1,11 @@
-package tech.getarrays.employeemenager.service;
+package tech.getarrays.employeemanager.service;
 
 import java.util.List;
 import java.util.UUID;  
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import tech.getarrays.employeemenager.model.Employee;
-import tech.getarrays.employeemenager.repo.EmployeeRepo;
+import tech.getarrays.employeemanager.model.Employee;
+import tech.getarrays.employeemanager.repo.EmployeeRepo;
 
 @Service
 public class EmployeeService {
@@ -36,6 +36,7 @@ public class EmployeeService {
     }
 
     public void deleteEmployee(Long id) {
-        employeeRepo.deleteEmployeeById(id);
+        //employeeRepo.deleteEmployeeById(id);
+        employeeRepo.deleteById(id);
     }
 }
